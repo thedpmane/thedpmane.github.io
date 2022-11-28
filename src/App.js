@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Navbar } from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      waiting for web-developer to build this
+      <Navbar />
     </div>
   );
 }
