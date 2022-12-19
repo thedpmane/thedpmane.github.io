@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.596e3fd0.css",
-    "main.js": "/static/js/main.f3bae7a4.js",
+    "main.css": "/static/css/main.f2bbb885.css",
+    "main.js": "/static/js/main.5033eda9.js",
     "static/media/lifesylestore.png": "/static/media/lifesylestore.4bc553953d5e3260f72b.png",
     "static/media/Skinstore.png": "/static/media/Skinstore.f9aaa729d6798e0b60f2.png",
+    "static/media/meanbuy.png": "/static/media/meanbuy.f754c11a3ce40fa68ec1.png",
     "static/media/deepak.jpg": "/static/media/deepak.a30aa2683fb7bae3d8fe.jpg",
     "static/media/Deepak_Mane_Resume.pdf": "/static/media/Deepak_Mane_Resume.1ad42a5e3bd8ac5afcb2.pdf",
     "index.html": "/index.html",
-    "main.596e3fd0.css.map": "/static/css/main.596e3fd0.css.map",
-    "main.f3bae7a4.js.map": "/static/js/main.f3bae7a4.js.map"
+    "main.f2bbb885.css.map": "/static/css/main.f2bbb885.css.map",
+    "main.5033eda9.js.map": "/static/js/main.5033eda9.js.map"
   },
   "entrypoints": [
-    "static/css/main.596e3fd0.css",
-    "static/js/main.f3bae7a4.js"
+    "static/css/main.f2bbb885.css",
+    "static/js/main.5033eda9.js"
   ]
 }
