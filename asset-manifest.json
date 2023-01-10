@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b0c0b6f8.css",
-    "main.js": "/static/js/main.f02f4b4c.js",
+    "main.css": "/static/css/main.d0bd2763.css",
+    "main.js": "/static/js/main.0dcea65a.js",
     "static/media/lifesylestore.png": "/static/media/lifesylestore.4bc553953d5e3260f72b.png",
     "static/media/Skinstore.png": "/static/media/Skinstore.f9aaa729d6798e0b60f2.png",
     "static/media/meanbuy.png": "/static/media/meanbuy.f754c11a3ce40fa68ec1.png",
@@ -9,11 +9,11 @@
     "static/media/Deepak_Mane_Resume.pdf": "/static/media/Deepak_Mane_Resume.1ad42a5e3bd8ac5afcb2.pdf",
     "static/media/logo.png": "/static/media/logo.9fb4e85c2d4c3b7bf830.png",
     "index.html": "/index.html",
-    "main.b0c0b6f8.css.map": "/static/css/main.b0c0b6f8.css.map",
-    "main.f02f4b4c.js.map": "/static/js/main.f02f4b4c.js.map"
+    "main.d0bd2763.css.map": "/static/css/main.d0bd2763.css.map",
+    "main.0dcea65a.js.map": "/static/js/main.0dcea65a.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0c0b6f8.css",
-    "static/js/main.f02f4b4c.js"
+    "static/css/main.d0bd2763.css",
+    "static/js/main.0dcea65a.js"
   ]
 }
