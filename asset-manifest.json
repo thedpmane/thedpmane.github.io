@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.7af0ebd9.css",
-    "main.js": "/static/js/main.200ad62c.js",
+    "main.css": "/static/css/main.e1aeca70.css",
+    "main.js": "/static/js/main.647cd5e3.js",
     "static/media/lifesylestore.png": "/static/media/lifesylestore.4bc553953d5e3260f72b.png",
     "static/media/Skinstore.png": "/static/media/Skinstore.f9aaa729d6798e0b60f2.png",
     "static/media/Licious.png": "/static/media/Licious.1321972b52b3e312bcf9.png",
     "static/media/meanbuy.png": "/static/media/meanbuy.07232491d3ba812b2d0b.png",
     "static/media/advanceautoparts.png": "/static/media/advanceautoparts.e1b55c2c4d7e44d4126b.png",
-    "static/media/deepak.jpg": "/static/media/deepak.a30aa2683fb7bae3d8fe.jpg",
+    "static/media/deepak.jpg": "/static/media/deepak.251ea2addb21761c9b58.jpg",
     "static/media/Deepak_Mane_Resume.pdf": "/static/media/Deepak_Mane_Resume.c2575fe798c2b999597b.pdf",
     "static/media/logo.png": "/static/media/logo.9fb4e85c2d4c3b7bf830.png",
     "index.html": "/index.html",
-    "main.7af0ebd9.css.map": "/static/css/main.7af0ebd9.css.map",
-    "main.200ad62c.js.map": "/static/js/main.200ad62c.js.map"
+    "main.e1aeca70.css.map": "/static/css/main.e1aeca70.css.map",
+    "main.647cd5e3.js.map": "/static/js/main.647cd5e3.js.map"
   },
   "entrypoints": [
-    "static/css/main.7af0ebd9.css",
-    "static/js/main.200ad62c.js"
+    "static/css/main.e1aeca70.css",
+    "static/js/main.647cd5e3.js"
   ]
 }
