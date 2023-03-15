@@ -1,0 +1,46 @@
+ul {
+  max-height: 150px;
+  width: 20px;
+  text-align: center;
+
+  position: fixed;
+  top: 70%;
+  right: 0;
+  z-index: 2;
+}
+ul li {
+  display: block;
+  color: #357ec7;
+  font-size: 17px;
+  height: 30px;
+  width: 30px;
+  background: #171515;
+  line-height: 30px;
+  border-radius: 50%;
+  margin: 0 0 3px -25px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+ul li:before {
+  border-radius: 50%;
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+ul li:before {
+  background: #357ec7;
+}
+
+ul li:hover:before {
+  filter: blur(1px);
+  transform: scale(1);
+}
+ul li:hover:before {
+  box-shadow: 0 0 15px #357ec7;
+}
+
+ul li:hover {
+  color: #357ec7;
+  box-shadow: 0 0 15px #357ec7;
+  text-shadow: 0 0 15px #357ec7;
+}
