@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.9c482854.css",
-    "main.js": "/static/js/main.9b49c41e.js",
+    "main.js": "/static/js/main.b354392e.js",
     "static/media/lifesylestore.png": "/static/media/lifesylestore.4bc553953d5e3260f72b.png",
     "static/media/Skinstore.png": "/static/media/Skinstore.f9aaa729d6798e0b60f2.png",
     "static/media/Licious.png": "/static/media/Licious.1321972b52b3e312bcf9.png",
@@ -12,10 +12,10 @@
     "static/media/logo.png": "/static/media/logo.9fb4e85c2d4c3b7bf830.png",
     "index.html": "/index.html",
     "main.9c482854.css.map": "/static/css/main.9c482854.css.map",
-    "main.9b49c41e.js.map": "/static/js/main.9b49c41e.js.map"
+    "main.b354392e.js.map": "/static/js/main.b354392e.js.map"
   },
   "entrypoints": [
     "static/css/main.9c482854.css",
-    "static/js/main.9b49c41e.js"
+    "static/js/main.b354392e.js"
   ]
 }
