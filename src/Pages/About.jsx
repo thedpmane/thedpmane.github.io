@@ -1,4 +1,4 @@
-import "../css/ResumeBtn.css";
+import "../Css/ResumeBtn.css";
 import { Box } from "@chakra-ui/react";
 import Typewriter from "typewriter-effect";
 
