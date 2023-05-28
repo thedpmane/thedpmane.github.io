@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import "./Navbar.css";
 import Resume from "../images/Deepak_Mane_Resume.pdf";
 import Logo from "../images/logo.png";
+import { FaSun, FaMoon } from "react-icons/fa";
 import {
   IconButton,
   Box,
   CloseButton,
   Flex,
   Icon,
-  useColorModeValue,
   Drawer,
   DrawerContent,
   Text,
   useDisclosure,
-  BoxProps,
-  FlexProps,
   Image,
+  useColorMode,
 } from "@chakra-ui/react";
 import { FiMenu } from "react-icons/fi";
 import {
@@ -25,20 +25,16 @@ import {
   FaProjectDiagram,
   FaPhoneAlt,
   FaDownload,
+  FaCalendarAlt,
 } from "react-icons/fa";
-import { IconType } from "react-icons";
-import { ReactText } from "react";
-
-interface LinkItemProps {
-  name: string;
-  icon: IconType;
-}
-
-const LinkItems: Array<LinkItemProps> = [
+import { useMediaQuery } from "@chakra-ui/react";
+import WebFont from "webfontloader";
+const LinkItems = [
   { name: "Home", icon: FaHome, path: "home" },
   { name: "About", icon: FaUser, path: "about" },
   { name: "Skills", icon: FaCogs, path: "skills" },
   { name: "Projects", icon: FaProjectDiagram, path: "projects" },
+  { name: "GitHub Calendar", icon: FaCalendarAlt, path: "githubcalender" },
   { name: "Contact", icon: FaPhoneAlt, path: "contact" },
 ];
 
@@ -46,9 +42,9 @@ function Navbar({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box bg={useColorModeValue("gray.100", "gray.900")}>
+    <Box>
       <SidebarContent
-        onClose={() => onClose}
+        onClose={onClose}
         display={{ base: "none", md: "block" }}
       />
       <Drawer
@@ -65,7 +61,6 @@ function Navbar({ children }) {
         </DrawerContent>
       </Drawer>
       {/* mobilenav */}
-
       <MobileNav
         pos="fixed"
         w="full"
@@ -78,32 +73,44 @@ function Navbar({ children }) {
   );
 }
 
-interface SidebarProps extends BoxProps {
-  onClose: () => void;
-}
-
-const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
+const SidebarContent = ({ onClose, ...rest }) => {
+  const { colorMode, toggleColorMode } = useColorMode();
+  const [isSmallerScreen] = useMediaQuery("(max-width: 768px)");
+  WebFont.load({
+    google: {
+      families: ["Bad Script", "Parisienne"],
+    },
+  });
   return (
     <Box
-      bg={useColorModeValue("black", "black")}
-      borderRight="1px"
-      borderRightColor={useColorModeValue("gray.200", "gray.700")}
+      borderRight="solid 1px #357EC7"
       w={{ base: "full", md: 60 }}
       pos="fixed"
-      backgroundColor="black"
-      color="white"
       h="full"
+      fontWeight={"semibold"}
       {...rest}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text
-          fontSize="2xl"
-          fontFamily="monospace"
-          fontWeight="bold"
-          color="#357EC7"
+        <Link
+          to={"home"}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={800}
+          activeClass={"blue"}
         >
-          Deepak Mane
-        </Text>
+          <Text
+            fontSize="4xl"
+            fontWeight="semibold"
+            color="#357EC7"
+            fontFamily="Parisienne"
+            ml="40px"
+            _hover={{ cursor: "pointer" }}
+          >
+            Deepak
+          </Text>
+        </Link>
+
         <CloseButton display={{ base: "flex", md: "none" }} onClick={onClose} />
       </Flex>
       <Box ml="20px">
@@ -131,8 +138,6 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             align="left"
             p="4"
             mx="4"
-            backgroundColor="black"
-            color="white"
             borderRadius="lg"
             role="group"
             cursor="pointer"
@@ -153,31 +158,46 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
             Resume
           </Box>
         </a>
+        {!isSmallerScreen && (
+          <Flex
+            align="center"
+            p="4"
+            mx="4"
+            borderRadius="lg"
+            role="group"
+            cursor="pointer"
+            _hover={{ bg: "#357EC7", color: "black" }}
+            onClick={toggleColorMode}
+          >
+            <Icon
+              mr="4"
+              fontSize="16"
+              color="#357EC7"
+              _groupHover={{ color: "white" }}
+              as={colorMode === "light" ? FaMoon : FaSun}
+            />
+            {colorMode === "light" ? "Dark Mode" : "Light Mode"}
+          </Flex>
+        )}
       </Box>
     </Box>
   );
 };
 
-interface NavItemProps extends FlexProps {
-  icon: IconType;
-  children: ReactText;
-}
-const NavItem = ({ icon, children, path, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, path, ...rest }) => {
   return (
     <Link
       to={path}
       spy={true}
       smooth={true}
-      offset={9}
-      duration={100}
-      activeClass="underline"
+      offset={0}
+      duration={800}
+      activeClass={"blue"}
     >
       <Flex
         align="center"
         p="4"
         mx="4"
-        backgroundColor="black"
-        color="white"
         borderRadius="lg"
         role="group"
         cursor="pointer"
@@ -204,11 +224,10 @@ const NavItem = ({ icon, children, path, ...rest }: NavItemProps) => {
   );
 };
 
-interface MobileProps extends FlexProps {
-  onOpen: () => void;
-}
-const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
+const MobileNav = ({ onOpen, ...rest }) => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const [mnavbg, setMnavbg] = useState(false);
+
   const ChangeMnavbg = () => {
     if (window.scrollY >= 430) {
       setMnavbg(false);
@@ -216,37 +235,66 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       setMnavbg(false);
     }
   };
+
   window.addEventListener("scroll", ChangeMnavbg);
+
   return (
     <Flex
+      bg={colorMode === "light" ? "white" : "black"}
       ml={{ base: 0, md: 60 }}
       px={{ base: 4, md: 24 }}
       height="20"
+      zIndex={"100"}
       id={mnavbg ? "navbglight" : "navbgdark"}
       alignItems="center"
       borderBottomWidth="1px"
-      borderBottomColor={useColorModeValue("gray.200", "gray.700")}
       justifyContent="space-between"
       {...rest}
     >
-      {" "}
-      <Text
-        color="#357EC7"
-        fontSize="2xl"
-        ml="8"
-        fontFamily="monospace"
-        fontWeight="bold"
+      <Link
+        to={"home"}
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={800}
+        activeClass={"blue"}
       >
-        <Image maxW={"50px"} className="logoimage" src={Logo} />
-      </Text>
-      <IconButton
-        variant="outline"
-        onClick={onOpen}
-        bg="#357EC7"
-        borderColor="#357EC7"
-        aria-label="open menu"
-        icon={<FiMenu />}
-      />
+        <Text
+          color="#357EC7"
+          fontSize="2xl"
+          ml="8"
+          fontFamily="monospace"
+          fontWeight="bold"
+          _hover={{ cursor: "pointer" }}
+        >
+          <Image
+            borderRadius={"100%"}
+            maxW={"50px"}
+            className="logoimage"
+            src={Logo}
+          />
+        </Text>
+      </Link>
+
+      <Flex gap={"10px"}>
+        <IconButton
+          variant="outline"
+          onClick={toggleColorMode}
+          bg="#357EC7"
+          borderColor="#357EC7"
+          borderRadius={"100%"}
+          icon={colorMode === "light" ? <FaMoon /> : <FaSun />}
+        />
+        <IconButton
+          variant="outline"
+          onClick={onOpen}
+          borderRadius={"100%"}
+          bg="#357EC7"
+          borderColor="#357EC7"
+          aria-label="open menu"
+          icon={<FiMenu />}
+        />
+      </Flex>
     </Flex>
   );
 };
