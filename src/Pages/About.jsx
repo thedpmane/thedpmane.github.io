@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Image, Divider, Flex, Heading } from "@chakra-ui/react";
-import about from "../images/about.png";
+import about from "../images/about1.png";
 import Typewriter from "typewriter-effect";
 import ResumeBtn from "../Components/ResumeBtn/ResumeBtn";
 const About = () => {
