@@ -39,8 +39,8 @@
 //       icon: <Icon as={FaPhone} boxSize={7} color="blue.500" />,
 //       heading: "Phone",
 //       subheading: (
-//         <a className="socialMediaLinksToPage" href="tel:7767874237">
-//           +91-7767874237
+//         <a className="socialMediaLinksToPage" href="tel:999999999">
+//           +91-999999999
 //         </a>
 //       ),
 //     },
@@ -170,8 +170,8 @@ const Contact = () => {
       icon: <Icon as={FaPhone} boxSize={7} color="blue.500" />,
       heading: "Phone",
       subheading: (
-        <a className="socialMediaLinksToPage" href="tel:7767874237">
-          +91-7767874237
+        <a className="socialMediaLinksToPage" href="tel:8208171348">
+          +91-8208171348
         </a>
       ),
     },
